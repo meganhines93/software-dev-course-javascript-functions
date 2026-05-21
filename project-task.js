@@ -33,25 +33,39 @@ This activity reinforces:
 // ============================================
 
 // Script 1 - Greeting multiple users
-console.log("Welcome, Alice!");
-console.log("Welcome, Bob!");
-console.log("Welcome, Charlie!");
+function greet(name){
+   console.log("Hello, " + name + "!");
+}
+greet("Alice");
+greet("Bob");
+greet("Charlie");
 
 // Script 2 - Sum calculation
-let num1 = 5, num2 = 10;
-let sum = num1 + num2;
-console.log("The sum of 5 and 10 is " + sum);
+const addNumbers = function(num1, num2){
+   return num1 + num2
+}
+let num1 = 5;
+let num2 = 10;
+let sum = addNumbers(num1, num2);
+
+console.log("The sum of " + num1 + " and " + num2 + " is " + sum);
 
 // Script 3 - Product calculation
-let product = num1 * num2;
-console.log("The product of 5 and 10 is " + product);
+const multiplyNumbers = function(num3, num4){
+   return num3 * num4
+}
+let num3 = 5
+let num4 = 10
+let product = multiplyNumbers (num3, num4);
+console.log("The product of " + num3 + " and " + num4 + " is " + product);
 
 // Script 4 - Print names from a list
-let names = ["Alice", "Bob", "Charlie"];
-console.log("Names in the list:");
-for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
+function printNamesArray(array){
+   for (let i=0; i<array.length; i++){
+      console.log(array[i]);
+   }
 }
+printNamesArray(["Alice", "Bob", "Charlie"]);
 
 /*
 ===========================================
